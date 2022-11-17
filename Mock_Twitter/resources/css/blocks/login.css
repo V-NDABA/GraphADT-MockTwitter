@@ -1,0 +1,14 @@
+.container {
+    width: 1100vw;
+    height: 87vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 2rem;
+}

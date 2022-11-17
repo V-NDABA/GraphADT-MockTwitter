@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter markup</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/blocks/layout.css" />
+    <link rel="stylesheet" href="css/blocks/brand.css" />
+    <link rel="stylesheet" href="css/blocks/sidebar.css" />
+    <link rel="stylesheet" href="css/blocks/tweet.css" />
+    <link rel="stylesheet" href="css/blocks/trends-for-you.css" />
+    <link rel="stylesheet" href="css/blocks/who-to-follow.css" />
+</head>
+
+<body onload="checkInterface()">
+    <div class="layout">
+        <div class="layout__left-sidebar">
+            <img src="./svg/twitter.svg" class="brand" />
+            <div class="sidebar-menu">
+                <div class="sidebar-menu__item sidebar-menu__item--active">
+                    <img src="./svg/home.svg" class="sidebar-menu__item-icon" />
+                    Home
+                </div>
+                <div class="sidebar-menu__item">
+                    <img src="./svg/explore.svg" class="sidebar-menu__item-icon" />
+                    Explore
+                </div>
+
+                <div class="sidebar-menu__item">
+                    <img src="./svg/notifications.svg" class="sidebar-menu__item-icon" />
+                    Notifications
+                </div>
+
+                <div class="sidebar-menu__item">
+                    <img src="./svg/messages.svg" class="sidebar-menu__item-icon" />
+                    Messages
+                </div>
+
+                <div class="sidebar-menu__item">
+                    <img src="./svg/profile.svg" class="sidebar-menu__item-icon" />
+                    Profile
+                </div>
+
+                <div class="sidebar-menu__item">
+                    <img src="./svg/more.svg" class="sidebar-menu__item-icon" />
+                    <a href="login.html">Exit</a>
+                </div>
+            </div>
+        </div>
+        <div class="layout__main" id="feed" onload="feed_tweets()">
+            <div class="tweet" id="feed-tweet" method="post">
+                <img class="tweet__author-logo" src="./images/profile-image-1.jpg" />
+                <div class="tweet__main">
+                    <div class="tweet__header">
+                        <div class="tweet__author-name" id="author-name">
+                            Becki (& Chris)
+                        </div>
+                        <div class="tweet__author-slug" id="author-username">
+                            @beckiandchris
+                        </div>
+                        <div class="tweet__publish-time" id="publish-time">
+                            38m
+                        </div>
+                    </div>
+                    <div class="tweet__content" id="tweet-body">
+                        Thank you
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__right-sidebar-container">
+            <div class="layout__right-sidebar">
+                <div class="who-to-follow">
+                    <div class="who-to-follow__block">
+                        <div class="who-to-follow__heading">
+                            Who to follow
+                        </div>
+                    </div>
+                    <div class="who-to-follow__block">
+                        <img class="who-to-follow__author-logo" src="./images/profile-image-1.jpg" />
+                        <div class="who-to-follow__content">
+                            <div>
+                                <div class="who-to-follow__author-name">
+                                    Becki (& Chris)
+                                </div>
+                                <div class="who-to-follow__author-slug" id="userName">
+                                    @beckiandchris
+                                </div>
+                            </div>
+                            <button class="who-to-follow__button" onClick="FollowUser();">Follow</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
